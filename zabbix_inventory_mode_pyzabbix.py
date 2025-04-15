@@ -5,7 +5,7 @@ from config import ZABBIX_URL, ZABBIX_USER, ZABBIX_PASSWORD
 def set_host_inventory_mode(zapi, host_id, mode):
     """
     Установка режима инвентаризации для хоста.
-    mode: 0 - Disabled, 1 - Manual, 2 - Automatic
+    mode: -1 - Disabled, 0 - Manual, 1 - Automatic
     """
     try:
         result = zapi.host.update(hostid=host_id, inventory_mode=mode)
@@ -52,7 +52,7 @@ def main():
         try:
             host_id = get_host_id_by_name(zapi, host_name)
             print(f"Найден хост '{host_name}' с ID: {host_id}")
-            set_host_inventory_mode(zapi, host_id, mode=2)  # Automatic
+            set_host_inventory_mode(zapi, host_id, mode=1)  # Automatic
         except Exception as e:
             print(f"Ошибка при обработке хоста: {e}")
 
