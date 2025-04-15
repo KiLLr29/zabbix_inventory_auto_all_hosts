@@ -1,6 +1,6 @@
 import csv
 from pyzabbix import ZabbixAPI
-from config_example import ZABBIX_URL, ZABBIX_USER, ZABBIX_PASSWORD
+from config import ZABBIX_URL, ZABBIX_USER, ZABBIX_PASSWORD
 
 def export_unique_tags_to_csv(zapi):
     """
