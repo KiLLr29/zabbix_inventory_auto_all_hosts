@@ -1,6 +1,6 @@
 from pyzabbix import ZabbixAPI
 import sys
-from config_example import ZABBIX_URL, ZABBIX_USER, ZABBIX_PASSWORD
+from config import ZABBIX_URL, ZABBIX_USER, ZABBIX_PASSWORD
 
 def set_host_inventory_mode(zapi, host_id, mode):
     """
