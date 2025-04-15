@@ -43,7 +43,7 @@ def main():
                 host_id = host["hostid"]
                 host_name = host["host"]
                 print(f"Обновление инвентаризации для хоста: {host_name} (ID: {host_id})")
-                set_host_inventory_mode(zapi, host_id, mode=2)  # Automatic
+                set_host_inventory_mode(zapi, host_id, mode=1)  # Automatic
         except Exception as e:
             print(f"Ошибка при обработке хостов: {e}")
     else:
